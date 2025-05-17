@@ -27,5 +27,10 @@
 </head>
 <body>
     <img src="desktop.png" alt="Escritório Dra Paula Vargas">
+<script>
+    fetch('social-bar.html')
+        .then(response => response.text())
+        .then(html => document.body.insertAdjacentHTML('beforeend', html));
+</script>
 </body>
 </html>
