@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Flutuante</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .whatsapp-bar {
+            position: fixed;
+            bottom: 20px; /* Mantém sempre no canto inferior */
+            right: 20px; /* Alinhado à direita */
+            background: #25d366;
+            padding: 12px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            animation: pulse 1.5s infinite;
+        }
+
+        .whatsapp-bar:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-bar img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .whatsapp-bar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Animação de pulsação */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Responsividade - Ajusta tamanho do botão para telas menores */
+        @media screen and (max-width: 600px) {
+            .whatsapp-bar {
+                right: 10px;
+                bottom: 10px;
+                padding: 8px;
+            }
+
+            .whatsapp-bar img {
+                width: 35px;
+                height: 35px;
+            }
+
+            .whatsapp-bar a {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="whatsapp-bar">
+        <img src="whatsapp-icon.png" alt="WhatsApp">
+        <a href="https://wa.me/5528999898684?text=Olá%2C+gostaria+de+mais+informações!" target="_blank">
+            Fale conosco!
+        </a>
+    </div>
+</body>
+</html>
