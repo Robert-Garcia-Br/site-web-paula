@@ -1,6 +1,9 @@
 <script>
-    if (window.innerWidth <= 768) {
-        window.location.href = "mobile.html"; // Mobile
+    var userAgent = navigator.userAgent.toLowerCase();
+    var isMobile = /iphone|ipad|android|mobile|tablet/.test(userAgent);
+
+    if (isMobile) {
+        window.location.href = "mobile.html"; // Mobile e tablets
     } else {
         window.location.href = "desk.html"; // Desktop
     }
